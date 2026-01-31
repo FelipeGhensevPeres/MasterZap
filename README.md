@@ -8,7 +8,7 @@ O objetivo do projeto é praticar **desenvolvimento web**, **integração entre 
 
 ## 🚀 Demonstração online
 🔗 **Acesse o app:**  
-((https://masterzap-3o34.onrender.com))
+https://masterzap-3o34.onrender.com
 
 ---
 
