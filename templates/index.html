@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MasterZap</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <!-- TOPO -->
+      <div class="header">
+        <h2>MasterZap 💬</h2>
+      </div>
+
+      <!-- CHAT -->
+      <div class="container-chat" id="chat">
+        <div class="mensagem outro">
+          <p>Bem-vindo ao MasterZap 😎</p>
+        </div>
+
+        <div class="mensagem eu">
+          <p>Mensagem daora do master pra teste</p>
+        </div>
+      </div>
+
+      <!-- INPUT -->
+      <div class="area-input">
+        <input type="text" id="mensagem" placeholder="Digite sua mensagem" />
+        <button id="botao-enviar">➤</button>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='bot.js') }}"></script>
+
+    <script>
+      const chat = document.getElementById("chat");
+      const inputMensagem = document.querySelector("input");
+      const botaoEnviar = document.querySelector("button");
+
+      function criarMensagem(texto, tipo) {
+        const div = document.createElement("div");
+        div.classList.add("mensagem", tipo);
+        div.innerHTML = `<p>${texto}</p>`;
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+      }
+
+      function enviarMensagem() {
+        const texto = inputMensagem.value.trim();
+        if (texto === "") return;
+
+        criarMensagem(texto, "eu");
+        inputMensagem.value = "";
+
+        setTimeout(() => {
+          const resposta = buscarResposta(texto);
+          criarMensagem(resposta, "outro");
+        }, 1000);
+      }
+
+      botaoEnviar.addEventListener("click", enviarMensagem);
+
+      inputMensagem.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") enviarMensagem();
+      });
+    </script>
+  </body>
+</html>
