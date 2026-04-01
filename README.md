@@ -26,6 +26,14 @@ Interface inspirada em apps de conversa modernos, com mensagens em tempo real di
 
 ---
 
+##  📞 Contato para Sugestões
+- E-mail: felipeghensev@gmail.com
+- Git-Hub: Aqui mesmo kkkkkk
+- Linkedin: https://www.linkedin.com/in/felipe-ghensev-peres-7a7427343/
+
+
+---
+
 ## 🗂 Estrutura do projeto
 
 ```text
