@@ -37,3 +37,8 @@ MasterZap/
 └── static/
     ├── style.css
     └── bot.js
+
+
+##  📞  CONTATO PARA SUGESTÕES
+
+E-mail: felipeghensev@gmail.com
